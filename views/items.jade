@@ -1,0 +1,35 @@
+extends layout
+
+block content
+
+  nav.navbar.navbar-expand-lg.navbar-light
+    div.offset-lg-2
+      a.navbar-brand(href='/')
+        img(src='./images/Logo_ML.png', alt='Logo Mercadolibre', title='Logo ML')
+    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
+      span.navbar-toggler-icon
+    #navbarSupportedContent.collapse.navbar-collapse
+      div.col-lg-9
+        form(action='items',method='get').form-inline.my-2.my-lg-0
+          .embed-btn.d-none.d-sm-none.d-md-none.d-lg-block.d-xl-block.col-lg-12
+            input.form-control.post_search_text.m-b(type='text', placeholder='Nunca dejes de buscar' name='search')
+            button(type='submit')
+              img(src="./images/ic_Search.png")
+  .col-lg-10.offset-lg-1
+    div.breadcr
+      p Celulares y Teléfonos > Celulares y Smartphones > iPhone > iPhone 6 32GB
+  each item in resultados.results
+    .item-container.col-lg-10.offset-lg-1
+        ul.carditem
+          li
+            div.images
+              a(href="/")
+                img(src=item.thumbnail, alt=item.query, title=item.query)
+            div.text
+              p.carditem-price.lg-col-3= "$ "+ item.price.toLocaleString()
+              p.carditem-place.offset-lg-9=item.address.state_name
+              a(href="/")
+                p.carditem-title=item.title
+              
+
+              

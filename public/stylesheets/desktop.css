@@ -1,0 +1,48 @@
+li { list-style: none}
+ul { margin: 0; padding: 0; }
+
+body { background-color: #EEEEEE; font-family: Helvetica,Arial,sans-serif;}
+nav.navbar{ background-color: #FFE600; margin: 0; padding: 0 ; height: 54px;}
+.navbar-brand { cursor: pointer; }
+
+/*BreadCrumb*/
+.breadcr{ margin: 16px 16px; font-size: 14px; }
+
+
+/*Card Items & Card Texts*/
+.carditem-price { font-size: 24px; padding-top: 32px; margin: 0px }
+.carditem-title { font-size: 18px; padding-top: 32px; margin: 0px }
+.carditem-place { font-size: 12px; margin-bottom: 0px; display: block;}
+
+.carditem { width: 100%; overflow: auto; background-color: #FFFFFF; }
+.carditem li:after { content: ""; position: absolute; left: 24px; bottom: 0; height: 1px; width: 94.5%; border-bottom: 1px solid #eee; }
+
+div.images { float: left; overflow: hidden; }
+div.images img { border-bottom-left-radius: 4px; width: 180px; height: 180px; margin: 16px; }
+
+
+/*SearchBox & SearchButton*/
+input.form-control.post_search_text.m-b {
+  padding: 5px;
+  width: 100%;
+  font-size: 18px;
+  -webkit-border-radius: 3px 3px 3px 3px;
+  border-radius: 3px 3px 3px 3px;
+}
+.embed-btn {
+  position: relative;
+}
+.embed-btn button {
+  position: absolute;
+  right: 16px;
+  top: 0;
+  width: 46px;
+  height: 39px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  background-image: -webkit-gradient(linear,left top,left bottom,from(#fff),to(#f1f1f1));
+  background-image: -webkit-linear-gradient(#fff,#f1f1f1);
+  background-image: linear-gradient(#fff,#f1f1f1);
+  border-radius: 0px 3px 3px 0px;
+  cursor: pointer;
+}
