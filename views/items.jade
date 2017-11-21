@@ -18,18 +18,17 @@ block content
   .col-lg-10.offset-lg-1
     div.breadcr
       p Celulares y Teléfonos > Celulares y Smartphones > iPhone > iPhone 6 32GB
-  each item in resultados.results
-    .item-container.col-lg-10.offset-lg-1
-        ul.carditem
-          li
-            div.images
-              a(href="/")
-                img(src=item.thumbnail, alt=item.query, title=item.query)
-            div.text
-              p.carditem-price.lg-col-3= "$ "+ item.price.toLocaleString()
-              p.carditem-place.offset-lg-9=item.address.state_name
-              a(href="/")
-                p.carditem-title=item.title
+        each item in resultados.results.slice(0, 4)
+          ul.carditem.overflow-hidden
+            li
+              div.float-left.image-min-width
+                a(href='/items/'+item.id)
+                  img(src=item.thumbnail, alt=item.query, title=item.query)
+              div
+                p.font-size-24.padding-top-32.lg-col-3.inline-block="$ "+ item.price.toLocaleString()
+                p.font-size-12.offset-lg-5.inline-block=item.address.state_name
+                a(href='/items/'+item.id)
+                  p.col-lg-7.font-size-18.padding-top-32=item.title
               
 
               

@@ -1,48 +1,57 @@
-li { list-style: none}
-ul { margin: 0; padding: 0; }
-
+/*Asigno color gris y le doy una font*/
 body { background-color: #EEEEEE; font-family: Helvetica,Arial,sans-serif;}
-nav.navbar{ background-color: #FFE600; margin: 0; padding: 0 ; height: 54px;}
+
+/*Le doy color al navbar, saco margenes y asigno altura*/
+.navbar{ background-color: #FFE600; margin: 0; padding: 0 ; height: 54px;}
+
+/*Logo de mercadolibre con puntero para click*/
 .navbar-brand { cursor: pointer; }
 
-/*BreadCrumb*/
-.breadcr{ margin: 16px 16px; font-size: 14px; }
+/*Saco los puntos de la UL y reseteo sus margenes*/
+ul { margin: 0; padding: 0; list-style: none}
 
+/*BreadCrumb, es la navegacion de filtros ( Checkear )*/
+.breadcr { margin: 16px 16px; font-size: 14px; }
 
-/*Card Items & Card Texts*/
-.carditem-price { font-size: 24px; padding-top: 32px; margin: 0px }
-.carditem-title { font-size: 18px; padding-top: 32px; margin: 0px }
-.carditem-place { font-size: 12px; margin-bottom: 0px; display: block;}
+/*Boton de compra*/
+.btn-comprar { background-color: #3483FA; width: 100%; color: #FFFFFF; border: none; border-radius: 4px; padding: 12px 12px;}
 
-.carditem { width: 100%; overflow: auto; background-color: #FFFFFF; }
+/*Elemento padre : ul.carditem overflow hidden -> Debe controlar de forma precisa el elemento hijo: imagen*/
+.carditem { background-color: #FFFFFF; }
+.overflow-hidden { overflow: hidden;}
+
+/*Elemento after: debe tener un contenido para poder utilizarse*/
 .carditem li:after { content: ""; position: absolute; left: 24px; bottom: 0; height: 1px; width: 94.5%; border-bottom: 1px solid #eee; }
 
-div.images { float: left; overflow: hidden; }
-div.images img { border-bottom-left-radius: 4px; width: 180px; height: 180px; margin: 16px; }
+/*Elemento que se separa de la hoja flotando a la izquierda el resto de los elementos se preparan para posicionarse a la derecha */
+.float-left { float: left; }
+.image-min-width img { border-bottom-left-radius: 4px; width: 180px; height: 180px; margin: 16px; border: 1px solid black }
 
+.image-max-width img { width: 680px; }
+
+/*Limpia el flotado del elemento LEFT (en este caso) para situarse abajo*/
+.description { clear: left; }
 
 /*SearchBox & SearchButton*/
-input.form-control.post_search_text.m-b {
-  padding: 5px;
-  width: 100%;
-  font-size: 18px;
-  -webkit-border-radius: 3px 3px 3px 3px;
-  border-radius: 3px 3px 3px 3px;
+input.form-control.post_search_text.m-b { padding: 5px; width: 100%; font-size: 18px; -webkit-border-radius: 3px 3px 3px 3px; border-radius: 3px 3px 3px 3px; }
+.embed-btn { position: relative; }
+.embed-btn button { position: absolute;
+  right: 16px; top: 0; width: 46px; height: 39px;
+  border: 1px solid #ccc; background-color: #fff; background-image: -webkit-gradient(linear,left top,left bottom,from(#fff),to(#f1f1f1));
+  background-image: -webkit-linear-gradient(#fff,#f1f1f1); background-image: linear-gradient(#fff,#f1f1f1);
+  border-radius: 0px 3px 3px 0px; cursor: pointer;
 }
-.embed-btn {
-  position: relative;
-}
-.embed-btn button {
-  position: absolute;
-  right: 16px;
-  top: 0;
-  width: 46px;
-  height: 39px;
-  border: 1px solid #ccc;
-  background-color: #fff;
-  background-image: -webkit-gradient(linear,left top,left bottom,from(#fff),to(#f1f1f1));
-  background-image: -webkit-linear-gradient(#fff,#f1f1f1);
-  background-image: linear-gradient(#fff,#f1f1f1);
-  border-radius: 0px 3px 3px 0px;
-  cursor: pointer;
-}
+
+/*Text weights and sizes*/
+.font-size-12 { font-size: 12px; margin-bottom: 0px;}
+.font-size-18 { font-size: 18px; }
+.font-size-24 { font-size: 24px;}
+.font-size-28 { font-size: 28px; }
+.font-size-46 { font-size: 46px;}
+.bold { font-weight: bold;}
+
+/*Paddings and displays*/
+.padding-top-32 { padding-top: 32px; margin: 0px; }
+.padding-top-16 { padding-top: 16px; }
+.padding-left-32 { padding-left: 32px; margin: 0px; }
+.inline-block {  display: inline-block; }

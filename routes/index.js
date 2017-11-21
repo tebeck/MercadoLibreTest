@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var request = require('request');
 
-/* GET home page. */
+/* GET search page. */
 router.get('/', function(req, res, next) {
   var search = req.query.search; // $_GET["search"] Superglobal.
 
