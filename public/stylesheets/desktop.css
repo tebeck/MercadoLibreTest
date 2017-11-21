@@ -25,7 +25,7 @@ ul { margin: 0; padding: 0; list-style: none}
 
 /*Elemento que se separa de la hoja flotando a la izquierda el resto de los elementos se preparan para posicionarse a la derecha */
 .float-left { float: left; }
-.image-min-width img { border-bottom-left-radius: 4px; width: 180px; height: 180px; margin: 16px; border: 1px solid black }
+.image-min-width img { border-bottom-left-radius: 4px; width: 180px; height: 180px; margin: 16px; }
 
 .image-max-width img { width: 680px; }
 
