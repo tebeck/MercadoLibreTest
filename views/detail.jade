@@ -3,14 +3,14 @@ extends layout
 block content
 
   nav.navbar.navbar-expand-lg.navbar-light
-    div.offset-lg-2
-      a.navbar-brand(href='/')
+    div.offset-lg-1.col-lg-1
+      a.navbar-brand.padding-0(href='/')
         img(src='../images/Logo_ML.png', alt='Logo Mercadolibre', title='Logo ML')
     button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
       span.navbar-toggler-icon
     #navbarSupportedContent.collapse.navbar-collapse
-      div.col-lg-9
-        form(action='../items',method='get').form-inline.my-2.my-lg-0
+      div.col-lg-11
+        form(action='items',method='get').form-inline.my-2.my-lg-0
           .embed-btn.d-none.d-sm-none.d-md-none.d-lg-block.d-xl-block.col-lg-12
             input.form-control.post_search_text.m-b(type='text', placeholder='Nunca dejes de buscar' name='search')
             button(type='submit')
@@ -31,7 +31,7 @@ block content
           else
             p=usado+" - "+iApi.sold_quantity+" vendidos"
           p.padding-top-16.font-size-24.bold=iApi.title
-          p.bold.font-size-46="$ "+ iApi.price.toLocaleString('de-DE', {maximumFractionDigits: 0}) 
+          p.bold.font-size-46=price
           button.btn-comprar Comprar
         div.description.col-lg-9.padding-left-32.offset-lg-12.padding-top-32 
           p.font-size-28 Descripción del producto

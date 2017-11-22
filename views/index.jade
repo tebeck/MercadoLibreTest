@@ -3,13 +3,13 @@ extends layout
 block content
   
   nav.navbar.navbar-expand-lg.navbar-light
-    div.offset-lg-2
-      a.navbar-brand(href='/')
+    div.offset-lg-1.col-lg-1
+      a.navbar-brand.padding-0(href='/')
         img(src='./images/Logo_ML.png', alt='Logo Mercadolibre', title='Logo ML')
     button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarSupportedContent', aria-controls='navbarSupportedContent', aria-expanded='false', aria-label='Toggle navigation')
       span.navbar-toggler-icon
     #navbarSupportedContent.collapse.navbar-collapse
-      div.col-lg-9
+      div.col-lg-11
         form(action='items',method='get').form-inline.my-2.my-lg-0
           .embed-btn.d-none.d-sm-none.d-md-none.d-lg-block.d-xl-block.col-lg-12
             input.form-control.post_search_text.m-b(type='text', placeholder='Nunca dejes de buscar' name='search')

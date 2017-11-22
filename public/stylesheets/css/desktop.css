@@ -44,7 +44,17 @@ a:hover {text-decoration: none;}
 .font-size-46 { font-size: 46px;}
 .bold { font-family: 'Proxima Nova', Georgia, sans-serif;}
 /*Paddings and displays*/
+.margin-right { right:100px; position: absolute;}
 .padding-top-32 { padding-top: 32px; margin: 0px; }
 .padding-top-16 { padding-top: 16px; }
 .padding-left-32 { padding-left: 32px; margin: 0px; }
+.margin-0 { margin: 0px; }
+.padding-0 { padding-left: 0px; }
 .inline-block {  display: inline-block; }
+
+@media (max-width: 980px) {
+  .margin-right {
+    position: relative;
+    margin-left: 50px;
+  }
+}
