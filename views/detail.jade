@@ -17,20 +17,23 @@ block content
               img(src="../images/ic_Search.png")
   .col-lg-10.offset-lg-1
     div.breadcr
-      p Celulares y Teléfonos > Celulares y Smartphones > iPhone > iPhone 6 32GB              
-      ul.carditem.padding-top-32
-        li
-          div.float-left.image-max-width.padding-left-32
-            img.img-fluid(src=resultados.thumbnail, alt=resultados.query, title=resultados.query)
-          div.overflow-hidden.offset-lg-9.col-lg-3
-            if resultados.condition = "new"
-              p=nuevo+" - "+resultados.sold_quantity+" vendidos"
-            else
-              p=usado+" - "+resultados.sold_quantity+" vendidos"
-            p.padding-top-16.font-size-24.bold=resultados.title
-            p.font-size-46="$ "+ resultados.price.toLocaleString()
-            button.btn-comprar Comprar
-          div.description.col-lg-9.padding-left-32.offset-lg-12.padding-top-32 
-            p.font-size-28 Descripción del producto
-            p=desc.plain_text
+        each categoria in cApi.path_from_root
+          span.lc.fc  > 
+          a(href=categoria.id)
+            span=categoria.name  
+    ul.carditem.padding-top-32
+      li
+        div.float-left.image-max-width.padding-left-32
+          img.img-fluid(src=iApi.thumbnail, alt=iApi.query, title=iApi.query)
+        div.overflow-hidden.offset-lg-9.col-lg-3
+          if iApi.condition = "new"
+            p=nuevo+" - "+iApi.sold_quantity+" vendidos"
+          else
+            p=usado+" - "+iApi.sold_quantity+" vendidos"
+          p.padding-top-16.font-size-24.bold=iApi.title
+          p.bold.font-size-46="$ "+ iApi.price.toLocaleString('de-DE', {maximumFractionDigits: 0}) 
+          button.btn-comprar Comprar
+        div.description.col-lg-9.padding-left-32.offset-lg-12.padding-top-32 
+          p.font-size-28 Descripción del producto
+          p=dApi.plain_text
               

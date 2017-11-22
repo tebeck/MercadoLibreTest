@@ -1,37 +1,26 @@
-/*Asigno color gris y le doy una font*/
-body { background-color: #EEEEEE; font-family: Helvetica,Arial,sans-serif;}
-
+body { background-color: #EEEEEE; font-family: 'proxima_nova_ltthin', Georgia, sans-serif;}
 /*Le doy color al navbar, saco margenes y asigno altura*/
 .navbar{ background-color: #FFE600; margin: 0; padding: 0 ; height: 54px;}
-
-/*Logo de mercadolibre con puntero para click*/
+/*Brand con puntero para click*/
 .navbar-brand { cursor: pointer; }
-
 /*Saco los puntos de la UL y reseteo sus margenes*/
 ul { margin: 0; padding: 0; list-style: none}
-
-/*BreadCrumb, es la navegacion de filtros ( Checkear )*/
+/*Navegacion de filtros*/
 .breadcr { margin: 16px 16px; font-size: 14px; }
-
 /*Boton de compra*/
-.btn-comprar { background-color: #3483FA; width: 100%; color: #FFFFFF; border: none; border-radius: 4px; padding: 12px 12px;}
-
-/*Elemento padre : ul.carditem overflow hidden -> Debe controlar de forma precisa el elemento hijo: imagen*/
+.btn-comprar { background-color: #3483FA; width: 100%; color: #FFFFFF; border: none; border-radius: 4px; padding: 12px 12px;font-family: 'Proxima Nova'}
+/*Elemento padre : carditem . Overflow hidden -> Debe controlar de forma precisa el elemento hijo: imagen*/
 .carditem { background-color: #FFFFFF; }
 .overflow-hidden { overflow: hidden;}
-
 /*Elemento after: debe tener un contenido para poder utilizarse*/
 .carditem li:after { content: ""; position: absolute; left: 24px; bottom: 0; height: 1px; width: 94.5%; border-bottom: 1px solid #eee; }
-
 /*Elemento que se separa de la hoja flotando a la izquierda el resto de los elementos se preparan para posicionarse a la derecha */
 .float-left { float: left; }
 .image-min-width img { border-bottom-left-radius: 4px; width: 180px; height: 180px; margin: 16px; }
-
+/*Imagen para detalle debe tener ancho estatico*/
 .image-max-width img { width: 680px; }
-
 /*Limpia el flotado del elemento LEFT (en este caso) para situarse abajo*/
 .description { clear: left; }
-
 /*SearchBox & SearchButton*/
 input.form-control.post_search_text.m-b { padding: 5px; width: 100%; font-size: 18px; -webkit-border-radius: 3px 3px 3px 3px; border-radius: 3px 3px 3px 3px; }
 .embed-btn { position: relative; }
@@ -41,15 +30,19 @@ input.form-control.post_search_text.m-b { padding: 5px; width: 100%; font-size: 
   background-image: -webkit-linear-gradient(#fff,#f1f1f1); background-image: linear-gradient(#fff,#f1f1f1);
   border-radius: 0px 3px 3px 0px; cursor: pointer;
 }
-
+.title { color: #333;}
+.title:hover { color: #000 ;}
+a:hover {text-decoration: none;}
+/*A estos elementos les asigno un nombre mas descriptivo ya que se reutilizan las clases y es la mejor forma que tengo para identificarlas*/
+.lc:last-child { display: none }
+.fc:first-child { display: none}
 /*Text weights and sizes*/
 .font-size-12 { font-size: 12px; margin-bottom: 0px;}
 .font-size-18 { font-size: 18px; }
 .font-size-24 { font-size: 24px;}
 .font-size-28 { font-size: 28px; }
 .font-size-46 { font-size: 46px;}
-.bold { font-weight: bold;}
-
+.bold { font-family: 'Proxima Nova', Georgia, sans-serif;}
 /*Paddings and displays*/
 .padding-top-32 { padding-top: 32px; margin: 0px; }
 .padding-top-16 { padding-top: 16px; }

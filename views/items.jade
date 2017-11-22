@@ -17,18 +17,21 @@ block content
               img(src="./images/ic_Search.png")
   .col-lg-10.offset-lg-1
     div.breadcr
-      p Celulares y Teléfonos > Celulares y Smartphones > iPhone > iPhone 6 32GB
-        each item in resultados.results.slice(0, 4)
+        if sApi.filters[0]
+          each filter in sApi.filters[0].values[0].path_from_root
+                span.fc  >  
+                a(href=filter.name)
+                  span=filter.name
+      each item in sApi.results.slice(0, 4)
           ul.carditem.overflow-hidden
             li
               div.float-left.image-min-width
                 a(href='/items/'+item.id)
                   img(src=item.thumbnail, alt=item.query, title=item.query)
               div
-                p.font-size-24.padding-top-32.lg-col-3.inline-block="$ "+ item.price.toLocaleString()
+                p.font-size-24.padding-top-32.lg-col-3.inline-block.bold="$ "+ item.price.toLocaleString('de-DE', {maximumFractionDigits: 0})
                 p.font-size-12.offset-lg-5.inline-block=item.address.state_name
                 a(href='/items/'+item.id)
-                  p.col-lg-7.font-size-18.padding-top-32=item.title
-              
+                  p.title.col-lg-7.font-size-18.padding-top-32=item.title
 
               
