@@ -3,9 +3,9 @@
 El proyecto se basa en un armado de tres vistas utilizando API de MercadoLibre.
 
 ## Getting Started
-
+```
 git clone https://github.com/tebeck/MercadoLibreTest.git
-
+```
 ### Prerequisites
 
 ```
