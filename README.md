@@ -28,6 +28,13 @@ Third step
 ```
 npm start
 ```
+Ya tenemos nuestra pagina funcionando, ahora debemos abrir un navegador y pegar esto:
+
+Fourth step
+```
+http://localhost:3000/
+```
+
 
 ## Built With
 
