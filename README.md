@@ -17,12 +17,14 @@ EXPRESS
 ### Installing
 
 First step
-
+```
+cd MercadoLibreTest
+```
+Second step
 ```
 npm install
 ```
-Second step
-
+Third step
 ```
 npm start
 ```
